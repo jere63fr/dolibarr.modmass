@@ -8,6 +8,12 @@
    </tr>
  <thead>
  <tbody>
+  	<tr>
+     <td>3.5</td>
+     <td>JTH</td>
+	 <td>22/12/2020</td>
+	 <td>FIX #1 bug on actions_modmass.class.php preventing to mass edit Dolibarr invoice line extrafields </td>
+   </tr>
  	<tr>
      <td>3.4</td>
      <td>JTH</td>
