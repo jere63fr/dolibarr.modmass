@@ -69,7 +69,7 @@ class ActionsModmass
 						$fkunit=$_POST['units'.$line->rowid];
 						// Extrafields
 						$extralabelsline = $extrafieldsline->fetch_name_optionals_label($object->table_element_line);
-						$array_option = $extrafieldsline->getOptionalsFromPost($extralabelsline,$line->rowid);
+						$array_options = $extrafieldsline->getOptionalsFromPost($extralabelsline,$line->rowid);
 						
 						$result = $object->updateline($line->rowid, $description, $pu_ht, $qty, $remise, $date_start, $date_end, $vat_rate,$localtax1,$localtax2,'HT',$info_bits,$type,$parentline,0,$fournprice,$buyingprice,$label,$special_code, $array_options,$situation_percent, $fkunit);
 					}
@@ -105,7 +105,7 @@ class ActionsModmass
 						$fkunit=$_POST['units'.$line->rowid];
 						// Extrafields
 						$extralabelsline = $extrafieldsline->fetch_name_optionals_label($object->table_element_line);
-						$array_option = $extrafieldsline->getOptionalsFromPost($extralabelsline,$line->rowid);
+						$array_options = $extrafieldsline->getOptionalsFromPost($extralabelsline,$line->rowid);
 						$result = $object->updateline($line->rowid, $pu_ht, $qty, $remise, $vat_rate, $localtax1_rate, $localtax2_rate, $description, 'HT' ,$info_bits ,$special_code,$parentline, $skip,$fournprice, $buyingprice,$label,$type,$date_start, $date_end, $array_option, $fkunit);
 					}
 				}
@@ -168,7 +168,7 @@ class ActionsModmass
 						$fkunit=$_POST['units'.$line->rowid];
 						// Extrafields
 						$extralabelsline = $extrafieldsline->fetch_name_optionals_label($object->table_element_line);
-						$array_option = $extrafieldsline->getOptionalsFromPost($extralabelsline,$line->rowid);
+						$array_options = $extrafieldsline->getOptionalsFromPost($extralabelsline,$line->rowid);
 						$result = $object->updateline($line->rowid, $pu_ht, $qty, $remise, $vat_rate, $localtax1_rate, $localtax2_rate, $description, 'HT' ,$info_bits ,$special_code,$parentline, $skip,$fournprice, $buyingprice,$label,$type, $array_option, $reffourn, $fkunit);
 					}
 				}
@@ -204,7 +204,7 @@ class ActionsModmass
 						$fkunit=$_POST['units'.$line->id];
 						// Extrafields
 						$extralabelsline = $extrafieldsline->fetch_name_optionals_label($object->table_element_line);
-						$array_option = $extrafieldsline->getOptionalsFromPost($extralabelsline,$line->rowid);
+						$array_options = $extrafieldsline->getOptionalsFromPost($extralabelsline,$line->rowid);
 						$result = $object->updateline($line->id, $description, $pu_ht, $qty, $remise, $vat_rate, $localtax1_rate, $localtax2_rate, 'HT' ,$info_bits , $type, 0, $date_start, $date_end, $array_option, $fkunit, $puhtdev, $reffourn);
 					}
 				}
@@ -241,7 +241,7 @@ class ActionsModmass
 						$idprd=$line->fk_product;
 						// Extrafields
 						$extralabelsline = $extrafieldsline->fetch_name_optionals_label($object->table_element_line);
-						$array_option = $extrafieldsline->getOptionalsFromPost($extralabelsline,$line->rowid);
+						$array_options = $extrafieldsline->getOptionalsFromPost($extralabelsline,$line->rowid);
 						$result = $object->updateline($line->rowid, $description, $pu_ht, $vat_rate, $localtax1_rate, $localtax2_rate, $qty, $idprd, 'HT' ,$info_bits , $type,  $remise, 0, $date_start, $date_end, $array_option, $fkunit, $puhtdev);
 					}
 				}
